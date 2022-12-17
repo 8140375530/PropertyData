@@ -2,6 +2,8 @@ const IMAGES = {
 
   // arrow icons
   left: require('../assets/arrow/left.png'),
+  ud: require('../assets/arrow/up.png'),
+  down: require('../assets/arrow/down.png'),
 
   // menu icons
   menu: require('../assets/menu/menu.png'),

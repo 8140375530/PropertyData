@@ -1,7 +1,6 @@
 import { Platform } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 
-
 import CONSTANTS from '../data/constants';
 import SIZES from '../data/sizes';
 import STRINGS from '../data/strings';
@@ -34,9 +33,6 @@ class PureFunctions {
   addArrayToArray = (arrayMain: Array<any>, arraySub: Array<any>, positionLast: boolean = true): Array<any> => {
     return positionLast ? [...arrayMain, ...arraySub] : [...arraySub, ...arrayMain];
   };
-
-
-
 
   /**
   * * For get the Number in the "K" and "M" format
@@ -118,7 +114,6 @@ class PureFunctions {
   */
   checkPasswordStrength = (N: number = 1, passValue: string = ''): string => {
     const { passwordStrong, passwordMedium, passwordSoSo, passwordWeek } = REGEX;
-
     if (passwordStrong.test(passValue)) {
       return N === 1 ? '100%' : N === 2 ? COLORS.green1 : STRINGS.textStrong;
     } else if (passwordMedium.test(passValue)) {
@@ -187,7 +182,6 @@ class PureFunctions {
     return new RegExp('[' + (onlyAllow ? '^' : '') + value + ']', 'g');
   }
 
-
   /**
   * * Check internet connectivity
   */
@@ -203,7 +197,6 @@ class PureFunctions {
   isIOS() {
     return (Platform.OS === 'ios');
   }
-
 
   /**
   * * Return size based on the device type
@@ -261,8 +254,6 @@ class PureFunctions {
   validationLengthCheck(array: Array<any> = []) {
     return ((array?.filter(obj => obj !== true))?.length === 0);
   }
-
-
 }
 
 

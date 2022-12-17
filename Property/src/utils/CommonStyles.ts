@@ -4,6 +4,7 @@ import PF from './PureFunction';
 
 const commonStyle = StyleSheet.create({
   flex: { flex: 1 },
+  flexGrow: { flexGrow: 1 },
   flexRow: { flexDirection: 'row' },
   flexColumn: { flexDirection: 'column' },
   justifyCenter: { justifyContent: 'center' },
