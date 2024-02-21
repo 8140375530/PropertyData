@@ -3,7 +3,7 @@ import { ITokenData } from './AsyncStorageInterface';
 import { IApi } from './ApiInterface';
 import { ISignInReducer, IASignInUser, ISignInUserAPI, IASignInSuccess } from './SignInInterface';
 import { ISignUpReducer, IASignUpUser, ISignUpUserAPI, IASignUpSuccess } from './SignUpInterface';
-import { ICommonReducer } from './CommonInterface';
+import { ICommonReducer, RootStackParamList } from './CommonInterface';
 import { IForgotPasswordReducer, IAForgotPasswordUser, IForgotPasswordUserAPI, IAForgotPasswordSuccess } from './ForgotPasswordInterface';
 import { IChangePasswordReducer, IAChangePasswordUser, IChangePasswordUserAPI, IAChangePasswordSuccess } from './ChangePasswordInterface';
 
@@ -74,6 +74,7 @@ export type {
 
   //? CommonInterface
   ICommonReducer,
+  RootStackParamList,
 
   //? NavigationInterface
   INavigation,

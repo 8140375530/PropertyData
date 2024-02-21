@@ -13,6 +13,7 @@ const CONSTANTS = {
   FORGOT_PASSWORD_SCREEN: 'ForgotPasswordScreen',
   HOME_SCREEN: 'HomeScreen',
   CHANGE_PASSWORD_SCREEN: 'changePasswordScreen',
+  PROFILE_SCREEN: 'ProfileScreen',
 
   // image resize mode
   IMAGE_CENTER: 'center',

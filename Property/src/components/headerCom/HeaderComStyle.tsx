@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   titleStyle: {
     ...GS.style_15_16,
     color: COLORS.white,
+    fontWeight: 'bold',
   },
 });
 

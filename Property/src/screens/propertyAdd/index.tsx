@@ -1,3 +1,3 @@
-import propertyAddScreen from './propertyAddScreen';
+import PropertyAddScreen from './propertyAddScreen';
 
-export default propertyAddScreen;
+export default PropertyAddScreen;

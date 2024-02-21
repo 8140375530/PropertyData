@@ -4,19 +4,9 @@ import FastImage, { ResizeMode } from 'react-native-fast-image';
 import CONSTANTS from '../../data/constants';
 import IMAGES from '../../data/images';
 
-// import CONSTANTS from '@app/data/constants';
-// import IMAGES from '@app/data/images';
 import Loader from '../loaderCom';
 import styles from './ImageComStyle';
-
-interface IProps extends TouchableOpacityProps {
-  styleContainer?: StyleProp<ViewStyle>,
-  isLocal?: boolean,
-  image: ImageSourcePropType | string,
-  resizeMode?: ImageResizeMode | ResizeMode,
-  defaultSource?: ImageURISource,
-  imageStyle?: StyleProp<ImageStyle>,
-}
+import ImageComProps from './ImageComProps';
 
 const DefaultProps = {
   isLocal: true,
@@ -24,7 +14,7 @@ const DefaultProps = {
   resizeMode: CONSTANTS.IMAGE_COVER,
 };
 
-const ImageCom = (props: IProps) => {
+const ImageCom = (props: ImageComProps) => {
   const {
     isLocal,
     resizeMode,

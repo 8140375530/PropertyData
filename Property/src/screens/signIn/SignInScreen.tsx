@@ -1,15 +1,22 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
 import { SafeAreaView, StatusBar, View } from 'react-native';
 
+import MainButton from '../../components/MainButtonCom';
 import ImageCom from '../../components/imageCom';
 import InputCom from '../../components/inputCom';
-import MainButton from '../../components/MainButtonCom';
 import IMAGES from '../../data/images';
 import STRINGS from '../../data/strings';
+import { RootStackParamList } from '../../interface';
 import GS from '../../utils/CommonStyles';
-import styles from './SignInStyles';
+import styles from './Styles';
+import DropDownCom from '../../components/dropDownCom';
 
-const SignInScreen = () => {
+type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'homeScreen'>;
+
+type Props = { navigation: ProfileScreenNavigationProp };
+
+const SignInScreen = ({ navigation }: Props) => {
 
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -20,13 +27,14 @@ const SignInScreen = () => {
     };
 
     const loginPress = () => {
+        navigation.navigate('homeScreen');
         console.log('loginPress');
     };
 
     return (
         <SafeAreaView style={[GS.flex, GS.appBackground]}>
             <StatusBar barStyle={'light-content'} />
-            <View style={[GS.flex, GS.appBackground, {}]}>
+            <View style={[GS.flex, GS.appBackground]}>
 
                 <ImageCom
                     image={IMAGES.House}
@@ -35,9 +43,8 @@ const SignInScreen = () => {
                     styleContainer={[styles.ImageView]}
                 />
 
-                <View style={[GS.flex, {}]}>
+                <View style={[GS.flex]}>
                     <View style={[GS.justifyCenter, GS.flex]}>
-
                         <InputCom
                             title={STRINGS.login.userName}
                             value={username}

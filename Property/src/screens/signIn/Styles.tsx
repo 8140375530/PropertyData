@@ -6,9 +6,11 @@ const styles = StyleSheet.create({
     ImageView: {
         ...GS.alignItemCenter,
         marginTop: 50,
+        position: 'absolute',
+        alignSelf: 'center',
     },
     PassMainContainerStyle: {
-        marginTop: 5,
+        marginTop: 10,
     },
     SignInButtonStyle: {
         ...GS.marginHorizontal,
